@@ -105,7 +105,7 @@ function cerrarSession() {
 		width: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
-		height: 80vh;
+		/*height: 80vh;*/
 	}
 
 
