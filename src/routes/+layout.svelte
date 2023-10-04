@@ -69,7 +69,8 @@ function cerrarSession() {
                 </ul>
 
                 {#if session}
-                <li><a id="lgText" on:click={CerrarMenu} href="/admin/user" title="iniciar sesion">Mi Perfil</a></li>
+                <!--<li><a id="lgText" on:click={CerrarMenu} href="/admin/user" title="iniciar sesion">Mi Perfil</a></li>  -->
+                
                 <span on:click={cerrarSession}>Cerrar Session</span>
                 {:else}
                 <li><a id="lgText" on:click={CerrarMenu} href="/login" title="iniciar sesion">Iniciar Session</a></li>

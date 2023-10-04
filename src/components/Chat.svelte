@@ -20,7 +20,12 @@
    <!-- else content here -->
    <div class="message human-message">
     <!--  <h1>{role}</h1> -->
-    <p>{content}</p>
+    {#if content.startsWith("Procesode")}
+       <!-- entiene que es un proceso -->
+    {:else}
+       <p>{content}</p>
+    {/if}
+    
   </div>
   {:else}
 {/if}
@@ -42,9 +47,13 @@
   border-radius: 8px;
   max-width: 80%;
 }
+
 .message p{
   margin: 0px;
+  font-size: 10px;
+  white-space: pre-line;
 }
+
 
 .human-message {
   background-color: #f5f5f5;

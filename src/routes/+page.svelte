@@ -16,7 +16,9 @@
 <section>
 	
 	<div class="home">
-		<h1>Abogacy</h1>
+		<video controls autoplay>
+			<source src="https://firebasestorage.googleapis.com/v0/b/abogacy-cc71f.appspot.com/o/abogacy.mp4?alt=media&token=d9394db9-6106-4d1c-86e9-6b4182106988" type="video/mp4">
+		</video>
 	</div>
 	<div class="corte">
 		<img src="{porqn}" alt="">
@@ -40,6 +42,10 @@
 </section>
 
 <style>
+	video{
+		width: 80%;
+		height: 70vh;
+	}
 	section{
 		margin: auto;
 		text-align: center;

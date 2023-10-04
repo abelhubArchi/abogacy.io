@@ -4,7 +4,7 @@
 	import Message from './Message.svelte';
 
     import quenecesitas from "../routes/public/img/quenecesitas.png";
-    import { chatDocumentAbogacy } from '../routes/js/digitalchat';
+    import { chatDocumentAbogacy, procesos } from '../routes/js/digitalchat';
     export let caso, id;
 
     let viewBoton1 = false;
@@ -23,23 +23,30 @@
 </script>
 
 {#if $digitalDocument == undefined}
-<!-- Imagen de Bienvenida -->
-   <span class="welcome">
-     <picture>
-     <img src={quenecesitas} alt="Welcome" />
-     </picture>
-  </span>
+
   <div class="opciones">
-    <button on:click={viewbotonUno} class="{botonFocus}" >Familiar</button>
-    <a href="/dashboard/uploadDocument/{caso}"><button>Chat Document</button></a>
     {#if viewBoton1}
     <div class="questionButtons">
-       <button>Divorcio</button>
-       <button>Asistencia Familiar</button>
-       <button>Homologacion</button>
-       <button>Guarda</button>
-       <button>Liquidacion</button>
-     </div>
+      <h1>Familiar</h1>
+      <button on:click={procesos(id, caso, 'Divorcio')}>Divorcio</button>
+      <button on:click={procesos(id, caso, 'AsistenFamiliar')}>Asistencia Familiar</button>
+      <button on:click={procesos(id, caso, 'Homologacion')}>Homologacion</button>
+      <button on:click={procesos(id, caso, 'Guarda')}>Guarda</button>
+      <button on:click={procesos(id, caso, 'LIquidacion')}>Liquidacion</button> <br>
+      <h1>Inmobiliario</h1>
+      <p>Estamos trabajando en ello</p>
+      <button style="background-color: red;" on:click={viewbotonUno}>Salir</button>
+    </div>
+    {:else}
+    <!-- Imagen de Bienvenida -->
+   <span class="welcome">
+    <picture>
+    <img src={quenecesitas} alt="Welcome" />
+    </picture>
+ </span>
+    <button on:click={viewbotonUno} class="{botonFocus}" >Procesos</button>
+    <a href="/dashboard/uploadDocument/{caso}"><button>Documentos</button></a>
+    <a href="/dashboard/uploadDocument/{caso}"><button>Redactar Memorial (pronto)</button></a>
     {/if}
   </div>
   
@@ -77,8 +84,8 @@
     .opciones{
     text-align: center;
     margin: 0px 0px 10px 0px;
-    max-height: 200px;
-    overflow: auto;  
+    max-height: 1000px;
+    overflow: auto; 
   }
   .opciones button{
     background-color: black;
@@ -92,8 +99,8 @@
   .opciones .questionButtons{
     display: flexbox;
     flex-wrap: wrap;
-    width: 30%;
-    text-align: left;
+    width: 100%;
+    text-align: center;
     margin-top: 20px;
   }
   .opciones .questionButtons button{

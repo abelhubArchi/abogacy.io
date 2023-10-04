@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://192.168.0.17:3000/";
+axios.defaults.baseURL = "http://192.168.0.18:3000/";
 var IA;
 let chatMessages;
 
 export const makeRequest = async (method, url, data) => {
     const config = {
-      baseURL: "http://192.168.0.17:3000/",
+      baseURL: "http://192.168.0.18:3000/",
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'aHjo0ePrUrQkoGe8rmE75i30pmH3',
