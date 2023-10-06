@@ -1,12 +1,15 @@
 import axios from 'axios';
+var local = 'http://192.168.0.18:3000/';
+var web = 'https://abogacy-519e5409953a.herokuapp.com/';
 
-axios.defaults.baseURL = "http://192.168.0.18:3000/";
+axios.defaults.baseURL = web;
+
 var IA;
 let chatMessages;
 
 export const makeRequest = async (method, url, data) => {
     const config = {
-      baseURL: "http://192.168.0.18:3000/",
+      baseURL: web,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'aHjo0ePrUrQkoGe8rmE75i30pmH3',
