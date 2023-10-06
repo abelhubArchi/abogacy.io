@@ -11,8 +11,8 @@ export const makeRequest = async (method, url, data) => {
     const config = {
       baseURL: web,
       headers: {
-        'Origin': 'https://abogacyio.netlify.app',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': ['https://abogacyio.netlify.app']
       },
     };
   
