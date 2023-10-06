@@ -17,11 +17,11 @@
          {"role": "user", "content": prompt}
         ];
 
-        mensajes.update(arr => [...arr, historialmsj[0]])
+          mensajes.update(arr => [...arr, historialmsj[0]])
            var data = JSON.stringify($mensajes)
            console.log("esto envia \n" ,  $mensajes);
            prompt = "";
-           var response = await makeRequest('post', `/chat/${id}/${ruta}/enviar`, {data});
+           var response = await makeRequest('POST', `/chat/${id}/${ruta}/enviar`, {data});
            mensajes.update(arr => [...arr, response])
            
       }else{
