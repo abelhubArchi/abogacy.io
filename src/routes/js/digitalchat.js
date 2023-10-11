@@ -1,5 +1,5 @@
 import { makeRequest } from "./axios";
-import { mensajes } from "./chat";
+import { loading, mensajes } from "./chat";
 
 export  async function chatDocumentAbogacy(id, caso, promptType, documento) {
    let historialMsj = [
@@ -169,11 +169,14 @@ export  async function procesos(id, caso, promptType) {
       default:
       break;
    }
-
-   
+   loading.set(true)
    var data = JSON.stringify(historialMsj) 
+   try {
    var digitalChat = await makeRequest('post', `/chat/${id}/${caso}/procesos/${promptType}`, {data})
    console.log(data);
    mensajes.update(arr => [...arr, digitalChat.data ])
    location.reload()
+   } catch (error) {
+   loading.set(false)
+   }
 }

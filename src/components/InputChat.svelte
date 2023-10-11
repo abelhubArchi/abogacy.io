@@ -3,27 +3,36 @@
     import { makeRequest } from "../routes/js/axios.js";
     import photo from "../routes/public/img/photo.svg";
     import send from "../routes/public/img/send.svg";
-    import { mensajes } from './../routes/js/chat.js';
+    import { mensajes,loading } from './../routes/js/chat.js';
     export let ruta;
     export let id;
     export let chats, verifyFirtsMsj;
 
     $: prompt = "";
 
-   
+    
     async function enviarmsg(){
+      
       if (prompt != "") { 
         let historialmsj = [
          {"role": "user", "content": prompt}
         ];
-
+          loading.set(true)
           mensajes.update(arr => [...arr, historialmsj[0]])
            var data = JSON.stringify($mensajes)
            console.log("esto envia \n" ,  $mensajes);
            prompt = "";
-           var response = await makeRequest('post', `/chat/${id}/${ruta}/enviar`, {data});
-           mensajes.update(arr => [...arr, response])
            
+           try {
+           var response = await makeRequest("post", `/chat/${id}/${ruta}/enviar`, { data });
+           mensajes.update(arr => [...arr, response]);
+           loading.set(false)
+
+           } catch (error) {
+           console.error("Error al hacer la solicitud:", error);
+           alert('Hubo un error, Abogacy esta muy saturado :(')
+           // Puedes manejar el error aquí, por ejemplo, mostrar un mensaje de error al usuario
+           }
       }else{
         alert('Escribe Tu Pregunta Personalizada')
         console.log($mensajes);

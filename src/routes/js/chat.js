@@ -14,3 +14,5 @@ export async function getChat(id, caso) {
     }
 
 }
+
+export const loading = writable(false)

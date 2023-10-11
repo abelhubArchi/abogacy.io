@@ -3,7 +3,7 @@
     import InputChat from '../../../../components/InputChat.svelte';
     import FirtsBottons from '../../../../components/primerBoton.svelte';
     import Message from '../../../../components/Message.svelte';
-    import { getChat,mensajes } from '../../../js/chat';
+    import { getChat,mensajes, loading } from '../../../js/chat';
     
     
     
@@ -65,12 +65,18 @@ var promptValue = '';
        <Chat role="{chat.role}" content={chat.content}></Chat>
     {/each}
   </div>
+  {#if $loading}
+     <h1>Abogacy respondiendo...</h1>
+  {/if}
+
   {/if}
 </div>
    <InputChat ruta="{data.caso}" id="{uid}"></InputChat>
 <style>
 
-
+  .container {
+  text-align: center;
+  }
  .container .containerChats {
   display: flex;
   flex-direction: column;
