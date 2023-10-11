@@ -32,7 +32,9 @@ export  async function procesos(id, caso, promptType) {
    
    ## Pensiones
    
-    El monto de asistencia a favor de tus hijo/as como mínimo debe ser del 20% del salario mínimo nacional (Bs. 2.121), actualmente Bs. - 450 cuando el padre no trabaja.`;
+    El monto de asistencia a favor de tus hijo/as como mínimo debe ser del 20% del salario mínimo nacional (Bs. 2.121), actualmente Bs. - 450 cuando el padre no trabaja.
+    Dame un resumen de que debo hacer
+    `;
    var divorcio = `# Divorcio
 
    - La pérdida de los derechos sucesorios entre los cónyuges, la pérdida de la pensión de viudedad, así como de las obligaciones derivadas directamente del matrimonio.
@@ -70,7 +72,8 @@ export  async function procesos(id, caso, promptType) {
    
    - En el DIVORCIO JUDICIAL se define la guarda de los hijos y el monto de asistencia familiar.
    - En el DIVORCIO NOTARIAL es importante que ambas partes estén de acuerdo, que
-   no hayan tenido hijos o quesean mayores de 25 años sean mayores de 25 años.`;
+   no hayan tenido hijos o quesean mayores de 25 años sean mayores de 25 años.
+   Dame un resumen de que debo hacer`;
    var liquidacion = `# Liquidación Familiar
 
    - La liquidación se cobra dentro de una asistencia familiar 
@@ -99,7 +102,8 @@ export  async function procesos(id, caso, promptType) {
    
    - El artículo 415 del Código de Comercio establece que la parte beneficiaria presentará la liquidación de pago de la asistencia devengada que será puesta a conocimiento de la otra parte, quien podrá observar en el plazo de tres (3) días. 
    - Después de haber pasado (3) días puedes hacer la denuncia. En cambio la acumulación de la liquidación tiene que ser mayor a los gastos de la demanda.
-   - Por otro lado, la liquidación tiene que ser ajustado a una posibilidad de cumplir para el demandado.`;
+   - Por otro lado, la liquidación tiene que ser ajustado a una posibilidad de cumplir para el demandado.
+   Dame un resumen de que debo hacer`;
    var homologacion = `# Homologación
 
    - Si en bolivia tienes un documento transaccional conciliatorio de asistencia familiar con su reconocimiento de firmas ante notario de fe pública o tienes un documento suscrito tiene que ser Homologado ante el juez en materia familiar.
@@ -110,7 +114,8 @@ export  async function procesos(id, caso, promptType) {
    - C.L. del demandante. 
    - C.L. del Demandado.
    - Croquis del domicilio del Demandado.
-   - Acuerdo regulador original.`;
+   - Acuerdo regulador original.
+   Dame un resumen de que debo hacer`;
    var guarda = `# Guarda
 
    La guarda familiar es una institución que permite asumir temporalmente el cuidado y custodia de un niño, niña o adolescente con carácter provisional y es otorgada mediante resolución judicial a uno de los progenitores. 
@@ -127,7 +132,8 @@ export  async function procesos(id, caso, promptType) {
    ## Leyes y derechos de la Guarda
    
     
-   - La ley que regula la guarda en Bolivia es el Código Niña, Niño y Adolescente (Ley Nº 548). El Código establece las clases de guarda, los requisitos para su otorgamiento y los derechos.`;
+   - La ley que regula la guarda en Bolivia es el Código Niña, Niño y Adolescente (Ley Nº 548). El Código establece las clases de guarda, los requisitos para su otorgamiento y los derechos.
+   Dame un resumen de que debo hacer`;
    
    switch (promptType) {
       case "AsistenFamiliar":
