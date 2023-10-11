@@ -1,6 +1,6 @@
 <script>
 	
-    import { makeRequest } from "../routes/js/axios";
+    import { makeRequest } from "../routes/js/axios.js";
     import photo from "../routes/public/img/photo.svg";
     import send from "../routes/public/img/send.svg";
     import { mensajes } from './../routes/js/chat.js';
