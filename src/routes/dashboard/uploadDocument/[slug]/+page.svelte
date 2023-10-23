@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
     import axios from 'axios';
     import documentIcon from './../../../public/img/documenIcon.svg'
-    var direccion = 'http://192.168.0.17:3000';
+    var direccion = 'https://abogacy.onrender.com/';
     import {getAuth, onAuthStateChanged, signOut} from 'firebase/auth';
     import { digitalDocument } from '../../../js/chat';
     export let data;
