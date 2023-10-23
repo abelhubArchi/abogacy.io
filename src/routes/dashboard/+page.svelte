@@ -89,9 +89,14 @@ const newCaso = async ()=>{
         height: 100%;
         text-align: center;
         padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
     .container .tabla .caso{
-        width: 70%;
+        width: 20%;
+        height: 30vh;
         margin: 30px auto;
         display: flex;
         justify-content: center;
@@ -103,7 +108,13 @@ const newCaso = async ()=>{
     .container .tabla .caso h1{
         font-size: 20px;
     }
-
+    @media only screen and (max-width: 700px){
+        .container .tabla .caso{
+        width: 40%;
+        height: 18vh;
+        background-color: #2B3F3E;
+      }
+    }
 
 </style>
 
