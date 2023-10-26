@@ -112,8 +112,11 @@ const newCaso = async ()=>{
         .container .tabla .caso{
         width: 40%;
         height: 18vh;
-        background-color: #2B3F3E;
+        background-color: #2e42b3;
       }
+      .container .tabla .caso h1{
+        color: white;
+    }
     }
 
 </style>
